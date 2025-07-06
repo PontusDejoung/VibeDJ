@@ -12,34 +12,46 @@ VibeDJ is a simple demo app that takes a user’s “vibe” (e.g. “chill even
 ## Installation
 
 1. Clone the repository and navigate into it:
+
    ```bash
     git clone https://github.com/PontusDejoung/VibeDJ.git
     cd vibedj
     ```
+    
 2. Create and activate a virtual environment:
+
     ```bash
     python3 -m venv .venv
     source .venv/bin/activate
     ```
+
 3. Install dependencies:
+
     ```bash
     pip install -r requirements.txt
     ```
+
 4. Create a .env file in the project root with your OpenAI key:
+
     ```bash
     OPENAI_API_KEY=sk-...
     ```
+
 ## Running the App 
+
     ```bash
     uvicorn app.main:app --reload --port 8000
     ```
+
 ## Usage
 # Send a POST request to /vibe:
+
     ```bash
     curl -X POST http://127.0.0.1:8000/vibe \
         -H "Content-Type: application/json" \
         -d '{"vibe":"chill evening"}'
     ```
+
 # Example Response
 {
   "vibe_summary": "Smooth Sunset: soft guitar chords and mellow beats for a relaxed evening.",
