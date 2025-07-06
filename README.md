@@ -39,9 +39,9 @@ VibeDJ is a simple demo app that takes a user’s “vibe” (e.g. “chill even
 
 ## Running the App 
 
-    ```
+    
     uvicorn app.main:app --reload --port 8000
-    ```
+
 
 ## Usage
 # Send a POST request to /vibe:
