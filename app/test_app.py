@@ -12,15 +12,13 @@ from dotenv import load_dotenv
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'env', '.env')
 load_dotenv(dotenv_path=dotenv_path)
 
-# Import app
 from main import app
 
 client = TestClient(app)
 
 def test_vibe_endpoint(vibe_input):
     print(f"\n--- Testing vibe: '{vibe_input}' ---")
-
-    # 1. Call /vibe endpoint\   
+ 
     resp = client.post("/vibe", json={"vibe": vibe_input})
     if resp.status_code != 200:
         print(f"ERROR: status code {resp.status_code}")
@@ -28,7 +26,6 @@ def test_vibe_endpoint(vibe_input):
         return False
     data = resp.json()
 
-    # 2. Print response data
     print("vibe_summary:", data.get("vibe_summary"))
     print("songs:")
     for song in data.get("songs", []):
@@ -37,18 +34,17 @@ def test_vibe_endpoint(vibe_input):
     return True
 
 if __name__ == '__main__':
-    # List of test inputs
     inputs = [
-        "chill evening",         # chill
-        "angry breakup",         # angry
-        "morning run",           # run
-        "random mood text",      # random
-        "late-night coding",     # random/focus
-        "upbeat party time",     # party
-        "deep concentration",    # focus
-        "melancholic reflection",# sad
-        "high-energy workout",   # run/party
-        "stressful day at work", # random/angry
+        "chill evening",         
+        "angry breakup",         
+        "morning run",           
+        "random mood text",      
+        "late-night coding",     
+        "upbeat party time",     
+        "deep concentration",    
+        "melancholic reflection",
+        "high-energy workout",   
+        "stressful day at work", 
     ]
 
     all_passed = True
