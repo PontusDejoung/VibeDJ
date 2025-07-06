@@ -13,7 +13,7 @@ VibeDJ is a simple demo app that takes a user’s “vibe” (e.g. “chill even
 
 1. Clone the repository and navigate into it:
    ```bash
-    git clone <repo-url>
+    git clone https://github.com/PontusDejoung/VibeDJ.git
     cd vibedj
     ```
 2. Create and activate a virtual environment:
