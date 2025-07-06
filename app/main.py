@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 env_path = os.path.join(os.path.dirname(__file__), '..', 'env', '.env')
 load_dotenv(dotenv_path=env_path)
 
-from .vibes import generate_vibe_summary
-from .suggester import suggest_playlist
+from vibes import generate_vibe_summary
+from suggester import suggest_playlist
 
 app = FastAPI()
 
