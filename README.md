@@ -46,14 +46,14 @@ VibeDJ is a simple demo app that takes a user’s “vibe” (e.g. “chill even
 ## Usage
 # Send a POST request to /vibe:
 
-    ```
+    
     curl -X POST http://127.0.0.1:8000/vibe \
         -H "Content-Type: application/json" \
         -d '{"vibe":"chill evening"}'
-    ```
+    
 
 # Example Response
-    ```
+    
     {
     "vibe_summary": "Smooth Sunset: soft guitar chords and mellow beats for a relaxed evening.",
     "songs": [
@@ -64,11 +64,11 @@ VibeDJ is a simple demo app that takes a user’s “vibe” (e.g. “chill even
         { "title": "Lost in Thoughts", "artist": "Honesty" }
     ]
     }
-    ```
+    
 
 ## Project Structure
 
-    ```
+    
     vibedj/
     ├── .gitignore
     ├── README.md
@@ -80,4 +80,4 @@ VibeDJ is a simple demo app that takes a user’s “vibe” (e.g. “chill even
         ├── suggester.py   # Mood classification and mock playlists
         ├── test_app.py    # Standalone smoke-test script for /vibe endpoint
         └── vibes.py       # OpenAI-based vibe summarization
-    ```
+    
