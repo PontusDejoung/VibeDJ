@@ -17,7 +17,7 @@ VibeDJ is a simple demo app that takes a user’s “vibe” (e.g. “chill even
     git clone https://github.com/PontusDejoung/VibeDJ.git
     cd vibedj
     ```
-    
+
 2. Create and activate a virtual environment:
 
     ```bash
@@ -65,15 +65,17 @@ VibeDJ is a simple demo app that takes a user’s “vibe” (e.g. “chill even
 }
 
 ## Project Structure
-vibedj/
-├── .gitignore
-├── README.md
-├── requirements.txt
-├── env/           # optional folder for .env
-│   └── .env
-└── app/
-    ├── main.py        # Application entrypoint
-    ├── suggester.py   # Mood classification and mock playlists
-    ├── test_app.py    # Standalone smoke-test script for /vibe endpoint
-    └── vibes.py       # OpenAI-based vibe summarization
 
+    ```bash
+    vibedj/
+    ├── .gitignore
+    ├── README.md
+    ├── requirements.txt
+    ├── env/           # optional folder for .env
+    │   └── .env
+    └── app/
+        ├── main.py        # Application entrypoint
+        ├── suggester.py   # Mood classification and mock playlists
+        ├── test_app.py    # Standalone smoke-test script for /vibe endpoint
+        └── vibes.py       # OpenAI-based vibe summarization
+    ```
