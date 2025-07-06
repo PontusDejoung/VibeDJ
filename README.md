@@ -39,34 +39,36 @@ VibeDJ is a simple demo app that takes a user’s “vibe” (e.g. “chill even
 
 ## Running the App 
 
-    ```bash
+    ```
     uvicorn app.main:app --reload --port 8000
     ```
 
 ## Usage
 # Send a POST request to /vibe:
 
-    ```bash
+    ```
     curl -X POST http://127.0.0.1:8000/vibe \
         -H "Content-Type: application/json" \
         -d '{"vibe":"chill evening"}'
     ```
 
 # Example Response
-{
-  "vibe_summary": "Smooth Sunset: soft guitar chords and mellow beats for a relaxed evening.",
-  "songs": [
-    { "title": "Sunset Lover", "artist": "Petit Biscuit" },
-    { "title": "Weightless", "artist": "Marconi Union" },
-    { "title": "River Flows in You", "artist": "Yiruma" },
-    { "title": "Night Owl", "artist": "Galimatias" },
-    { "title": "Lost in Thoughts", "artist": "Honesty" }
-  ]
-}
+    ```
+    {
+    "vibe_summary": "Smooth Sunset: soft guitar chords and mellow beats for a relaxed evening.",
+    "songs": [
+        { "title": "Sunset Lover", "artist": "Petit Biscuit" },
+        { "title": "Weightless", "artist": "Marconi Union" },
+        { "title": "River Flows in You", "artist": "Yiruma" },
+        { "title": "Night Owl", "artist": "Galimatias" },
+        { "title": "Lost in Thoughts", "artist": "Honesty" }
+    ]
+    }
+    ```
 
 ## Project Structure
 
-    ```bash
+    ```
     vibedj/
     ├── .gitignore
     ├── README.md
