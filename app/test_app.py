@@ -7,11 +7,6 @@ import os
 import json
 import sys
 from fastapi.testclient import TestClient
-from dotenv import load_dotenv
-
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'env', '.env')
-load_dotenv(dotenv_path=dotenv_path)
-
 from main import app
 
 client = TestClient(app)

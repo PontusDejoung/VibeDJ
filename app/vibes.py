@@ -1,9 +1,5 @@
 import os
 import openai
-from dotenv import load_dotenv
-
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'env', '.env')
-load_dotenv(dotenv_path=dotenv_path)
 
 def generate_vibe_summary(vibe_text: str) -> str:
     prompt = f"""
